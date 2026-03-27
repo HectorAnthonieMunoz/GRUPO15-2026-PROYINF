@@ -10,7 +10,7 @@ Este es el repositorio del *Grupo 3*, cuyos integrantes son:
 | Nombre Completo         | RUT           | Rol                     |
 |-------------------------|---------------|--------------------------|
 | Héctor Muñoz            | 202373628-7   | Integrante               |
-| Vicente Gaete           | -----------   | Integrante               |
+| Vicente Gaete           | 202373605-8   | Integrante               |
 | Andrés Vial             | 202373627-9   | Integrante               |
 | Simón Parra             | 202373560-4   | Integrante               |
 | Cristóbal Carrión      | 202373598-1   | Integrante               |
