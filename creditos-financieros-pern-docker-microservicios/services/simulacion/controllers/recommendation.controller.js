@@ -23,5 +23,5 @@ const getRecommendation = (req, res) => {
 };
 
 module.exports = {
-  getRecommendation // 🔴 ESTO ES CLAVE
+  getRecommendation 
 };
