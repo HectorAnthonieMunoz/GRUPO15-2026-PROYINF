@@ -15,7 +15,35 @@ export default function SimulacionPage() {
   // ESTADOS NUEVOS PARA LA HU 1
   const [ingresos, setIngresos] = useState("");
   const [deudas, setDeudas] = useState("0");
+  
+  // HU 5
+  const handleRecommendation = async () => {
+    try {
+      const response = await fetch("http://localhost:3002/api/recommendation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ingreso: Number(ingresos),
+        }),
+      });
 
+      if (!response.ok) {
+        throw new Error("No se pudo obtener recomendación");
+      }
+
+      const data = await response.json();
+
+      setMonto(data.monto);
+      setPlazo(data.plazo);
+
+    } catch (error) {
+      console.error(error);
+      window.alert("Error al generar recomendación");
+    }
+  };
+  
   const {
     monto,
     setMonto,
@@ -73,6 +101,7 @@ export default function SimulacionPage() {
           setIngresos={setIngresos}
           deudas={deudas}
           setDeudas={setDeudas}
+          handleRecommendation={handleRecommendation}
           handleSimular={(e) => {
             e.preventDefault();
             // Le pasamos al hook los datos originales + los financieros

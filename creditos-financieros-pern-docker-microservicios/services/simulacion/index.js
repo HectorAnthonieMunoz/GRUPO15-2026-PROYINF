@@ -1,11 +1,15 @@
 
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 const { pool, connectWithRetry } = require("./db");
 const simulacionRoutes = require("./routes/simulacionRoutes");
 const recommendationRoutes = require("./routes/recommendation.routes")
 
+
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // Ruta de salud (health check)
@@ -22,7 +26,7 @@ app.get("/", (req, res) => {
 app.use("/api", simulacionRoutes);
 
 // ruta de recomendacion
-app.use("/", recommendationRoutes);
+app.use("/api", recommendationRoutes);
 
 // Plantilla para agregar más rutas o middlewares
 // app.use('/otra', require('./routes/otraRoutes'));

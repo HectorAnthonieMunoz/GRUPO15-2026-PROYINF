@@ -10,6 +10,8 @@ export default function SimulacionForm({
   setIngresos,
   deudas,
   setDeudas,
+  // prop HU 5
+  handleRecommendation,
   // Props originales
   handleSimular,
   loading,
@@ -134,6 +136,9 @@ export default function SimulacionForm({
             }}
           >
             {loading ? "Evaluando..." : "Simular y Evaluar"}
+          </button>
+          <button type="button" onClick={handleRecommendation} style={{ ...styles.button, ...styles.buttonSecondary}}>
+            Recomendado
           </button>
           <button type="button" onClick={handleLimpiar} style={{ ...styles.button, ...styles.buttonSecondary }}>
             Limpiar

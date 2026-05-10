@@ -1,13 +1,13 @@
 const getRecommendation = (req, res) => {
   try {
-    const { ingreso, edad } = req.body;
+    const { ingreso} = req.body;
 
     if (!ingreso) {
       return res.status(400).json({ error: "Falta ingreso" });
     }
 
     const maxCuota = ingreso * 0.3;
-    const plazo = edad < 30 ? 36 : 24;
+    const plazo = 24;
     const monto = maxCuota * plazo;
 
     res.json({
