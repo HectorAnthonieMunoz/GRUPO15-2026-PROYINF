@@ -1,4 +1,3 @@
-// Controlador de simulación (adaptado a Chile)
 const { pool } = require('../db');
 
 // ===================================
