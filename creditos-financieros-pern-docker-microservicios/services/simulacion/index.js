@@ -9,7 +9,11 @@ const recommendationRoutes = require("./routes/recommendation.routes")
 
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  }),
+);
 app.use(express.json());
 
 // Ruta de salud (health check)
