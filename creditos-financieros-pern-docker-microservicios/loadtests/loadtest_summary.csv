@@ -1,0 +1,16 @@
+,valor
+muestras_totales,20000.0
+exitosas,17977.0
+fallidas,2023.0
+fallidas_por_tiempo_mayor_1000ms,2021.0
+fallidas_por_bind_exception,2.0
+tasa_error_pct,10.12
+duracion_aprox_seg,33.465
+throughput_aprox_req_s,559.82
+promedio_ms,256.19
+mediana_ms,30.0
+p90_ms,1021.0
+p95_ms,1846.05
+p99_ms,2166.0
+min_ms,1.0
+max_ms,2261.0
